@@ -1,0 +1,63 @@
+//Problem 11. Programming Languages
+//
+//    Perform a research (e.g. in Google or Wikipedia) and provide a short list with information about the most popular programming languages. How similar are they to C#? How do they differ from C#?
+//    Write in a text file called “programming-languages.txt” at least five languages along with 2-3 sentences about each of them. Use English.
+
+
+Here are top10 "most popular programming languages" from the first 3 googled sites:
+
+http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html
+C
+Java
+Objective-C
+C++
+C#
+PHP
+JavaScript
+Python
+Perl
+PL/SQL
+
+http://langpop.com/
+C
+Java
+PHP
+JavaScript
+C++
+Python
+Shell
+Ruby
+Objective C
+C#
+
+http://spectrum.ieee.org/computing/software/top-10-programming-languages
+Java
+C
+C++
+C#
+Python
+Java Script
+PHP
+Ruby
+SQL
+MATLAB
+
+
+I was thinking for C# as a modern language, with HUGE platform for developers and many good, ready to use extras. But seeing this charts made me feel that "old-school" C and Java are holding very strong positions at this time. Maybe there is reasons, who knows?!?
+
+My top 5 (for research) is: C, Java, C++, JavaScript , PHP
+
+1. C (i learned it in university): It provides low-level access to memory - using pointer(s) (data type). It is not Object-oriented and no garbage collection is available.
+
+2.Java is Object-oriented language with garbage collection. It is designed to let application developers run programs anywhere(over Java virtual machine (JVM)) without need of recompilation. 
+
+3. C++ is object-oriented language with low-level access to memory. No garbage collection. Better memory and speed performance then Java. (It is like C with classes/objects)
+
+4. JavaScript is commonly used to allow server scripts to interact with user, his browser and displayed information. It allows web applications building and audio, video and third party apps(like PDF in browser) implementation. It is functional style language, that supports object-oriented features.
+
+5. PHP is a server-side scripting language designed for web development, but also used as a general-purpose programming language. It is commonly used to generate HTML (web site) code on request.
+
+
+
+Well, C# takes all benefits of modern dynamic languages. It gives alternatives to Java and even PHP. This makes solid ground for future development, and gives us possibilities to be surprised in (near) future.
+
