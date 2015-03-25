@@ -58,20 +58,23 @@
             gList[count++] = element;
         }
 
-        public T this[int Index]
+        public T this[int index]
         {
             get
             {
+                this.Index = index;
                 return (this.gList[Index]);
             }
             set
             {
+                this.Index = index;
                 this.gList[Index] = value;
             }
         }
 
-        public void Remove(int Index)
+        public void Remove(int index)
         {
+            this.Index = index;
             if (Index < LastIndex)
             {
                 for (int i = Index + 1; i <= LastIndex; i++)
@@ -82,8 +85,9 @@
             count--;
         }
 
-        public void InsertAt(T element, int Index)
+        public void InsertAt(T element, int index)
         {
+            this.Index = index;
             Add(element);
             if (Index < LastIndex)
             {
@@ -114,8 +118,9 @@
         //
         // Returns:
         //     The index of the first found element or (-1) of not found.
-        public int Find(T element, int Index = 0)
+        public int Find(T element, int index = 0)
         {
+            this.Index = index;
             for (int i = Index; i < LastIndex; i++)
             {
                 if (gList[i].Equals(element))
@@ -131,9 +136,9 @@
             if (count != 0)
             {
                 T min = gList[0];
-                for (int i = 1; i < count; i++)
+                for (int i = 1; i <= LastIndex; i++)
                 {
-                    if (min.CompareTo(gList[i]) < 0)
+                    if (min.CompareTo(gList[i]) > 0)
                     {
                         min = gList[i];
                     }
@@ -151,9 +156,9 @@
             if (count != 0)
             {
                 T max = gList[0];
-                for (int i = 1; i < count; i++)
+                for (int i = 1; i <= LastIndex; i++)
                 {
-                    if (max.CompareTo(gList[i]) > 0)
+                    if (max.CompareTo(gList[i]) < 0)
                     {
                         max = gList[i];
                     }
@@ -170,7 +175,7 @@
         public override string ToString()
         {
             var sb = new StringBuilder();
-            for (int i = 0; i < LastIndex; i++)
+            for (int i = 0; i <= LastIndex; i++)
             {
                 sb.Append("{");
                 sb.Append(gList[i].ToString());

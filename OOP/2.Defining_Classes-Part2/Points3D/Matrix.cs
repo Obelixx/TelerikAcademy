@@ -1,13 +1,17 @@
 ﻿namespace Matrix
 {
     using System;
+    using System.Text;
 
     class Matrix<T> where T : IConvertible
     {
         private int rows;
         private int cols;
         private T[,] matrix;
+        private int rowI;
+        private int colI;
 
+        #region Prop
         public int Rows
         {
             get { return rows; }
@@ -44,7 +48,7 @@
         {
             get
             {
-                return (rowIndex);
+                return (rowI);
             }
             set
             {
@@ -52,13 +56,14 @@
                 {
                     throw new ArgumentOutOfRangeException("Row index must exist in the matrix!");
                 }
+                this.rowI = value;
             }
         }
         private int colIndex
         {
             get
             {
-                return (colIndex);
+                return (colI);
             }
             set
             {
@@ -66,8 +71,36 @@
                 {
                     throw new ArgumentOutOfRangeException("Column index must exist in the matrix!");
                 }
+                this.colI = value;
             }
         }
+
+        public bool IsTrue
+        {
+            get
+            {
+                for (int i = 0; i < Rows; i++)
+                {
+                    for (int j = 0; j < Cols; j++)
+                    {
+                        if (this.matrix[i, j] == (dynamic)0)
+                        {
+                            return (false);
+                        }
+                    }
+                }
+                return (true);
+            }
+        }
+
+        public bool IsFalse 
+        {
+            get
+            {
+                return (!IsTrue);
+            }
+        }
+        #endregion
 
         public Matrix(int rowsCount, int colsCount)
         {
@@ -76,10 +109,20 @@
             this.matrix = new T[Rows, Cols];
         }
 
-        public T this[int rowIndex, int colIndex]
+        public T this[int row, int col]
         {
-            get { return (matrix[rowIndex, colIndex]); }
-            set { matrix[rowIndex, colIndex] = value; }
+            get
+            {
+                this.rowIndex = row;
+                this.colIndex = col;
+                return (matrix[rowIndex, colIndex]);
+            }
+            set
+            {
+                this.rowIndex = row;
+                this.colIndex = col;
+                matrix[rowIndex, colIndex] = value;
+            }
         }
 
         public static Matrix<T> operator +(Matrix<T> A, Matrix<T> B)
@@ -90,7 +133,7 @@
             }
             Matrix<T> result = new Matrix<T>(A.Rows, A.Cols);
 
-            for (int i = 0; i <= A.Rows; i++)
+            for (int i = 0; i < A.Rows; i++)
             {
                 for (int j = 0; j < A.Cols; j++)
                 {
@@ -108,7 +151,7 @@
             }
             Matrix<T> result = new Matrix<T>(A.Rows, A.Cols);
 
-            for (int i = 0; i <= A.Rows; i++)
+            for (int i = 0; i < A.Rows; i++)
             {
                 for (int j = 0; j < A.Cols; j++)
                 {
@@ -120,17 +163,17 @@
 
         public static Matrix<T> operator *(Matrix<T> A, Matrix<T> B)
         {
-            if (A.Rows != B.Cols)
+            if (B.Rows != A.Cols)
             {
-                throw new ArgumentException("Matrix A rows must be equal to Matrix B columns!");
+                throw new ArgumentException("Matrix A columns must be equal to Matrix B rows!");
             }
             Matrix<T> result = new Matrix<T>(A.Rows, B.Cols);
 
-            for (int i = 0; i <= A.Rows; i++)
+            for (int i = 0; i < result.Rows; i++)
             {
-                for (int j = 0; j <= B.Cols; j++)
+                for (int j = 0; j < result.Cols; j++)
                 {
-                    for (int ind = 0; ind <= A.Cols; ind++)
+                    for (int ind = 0; ind < A.Cols; ind++)
                     {
                         result[i, j] += (dynamic)A[i, ind] * B[ind, j];
                     }
@@ -139,29 +182,46 @@
             return (result);
         }
 
-        private static bool IsTrue(Matrix<T> A)
+        public void FillMatrix(T with)
         {
-            for (int i = 0; i < A.Rows; i++)
+            for (int i = 0; i < this.Rows; i++)
             {
-                for (int j = 0; j < A.Cols; j++)
+                for (int j = 0; j < this.Cols; j++)
                 {
-                    if (A[i, j] == (dynamic)0)
-                    {
-                        return (false);
-                    }
+                    this.matrix[i, j] = with;
                 }
             }
-            return (true);
         }
 
         public static bool operator true(Matrix<T> A)
         {
-            return (IsTrue(A));
+            return (A.IsTrue);
         }
         public static bool operator false(Matrix<T> A)
         {
-            return (!IsTrue(A));
+            return (A.IsFalse);
         }
 
+        public static bool operator &(Matrix<T> A, Matrix<T> B) { return (A.IsTrue & B.IsTrue); }
+
+        public static bool operator |(Matrix<T> A, Matrix<T> B) { return (A.IsTrue | B.IsTrue); }
+
+
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            for (int i = 0; i < this.Rows; i++)
+            {
+                sb.Append("{");
+                for (int j = 0; j < this.Cols; j++)
+                {
+                    sb.Append("[");
+                    sb.Append(this.matrix[i, j]);
+                    sb.Append("]");
+                }
+                sb.Append("}\n");
+            }
+            return (sb.ToString());
+        }
     }
 }
