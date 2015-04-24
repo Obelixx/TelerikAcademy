@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Registration form</title>
+</head>
+<body>
+    <form>
+        <table border="1" cellspacing="0">
+            <tbody>
+                <tr>
+                    <th>Last Name</th>
+                    <td>
+                        <input id="lastName" type="text" placeholder="Your last name here." />
+                    </td>
+                </tr>
+                <tr>
+                    <th>First Name</th>
+                    <td>
+                        <input id="firstName" type="text" placeholder="Your first name here." />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td>
+                        <textarea id="address" name="address" cols="20" rows="3" placeholder="Your address here."></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <td>
+                        <input id="city" type="text" placeholder="Your city here." />
+                        State
+                        <input id="state" type="text" placeholder="Your state here." />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Zip/Postal Code</th>
+                    <td>
+                        <input id="zip_pc" type="text" min="3" max="6" placeholder="Your Zip/Postal Code here." />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Country</th>
+                    <td>
+                        <select id="country">
+                            <option>America</option>
+                            <option selected="selected">Bulgaria</option>
+                            <option>Canada</option>
+                            <option>Germany</option>
+                            <option>Narnia :P</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Phone(country code,<wbr> area code, number)</th>
+                    <td>
+                        (+ <input id="cCode" type="text" name="cCode" min="3" max="3" placeholder="+359" style="width:40px" />)
+                        <input id="aCode" type="text" name="aCode" min="1" max="3" placeholder="XXX" style="width:40px" />
+                        <input id="number" type="text" name="number" min="3" max="10" placeholder="XX XX XX" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>E-mail</th>
+                    <td>
+                        <input id="email" type="email" name="email" placeholder="your@mail.end" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Birth date</th>
+                    <td><input id="bday" type="date" name="bday" /></td>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <td>
+                        <select>
+                            <option>Female</option>
+                            <option selected="selected">Male</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Starting date</th>
+                    <td>
+                        <input type="radio" name="radiostdate" value="spring" /> Spring 2015 &nbsp;&nbsp;
+                        <input type="radio" name="radiostdate" value="summer" /> Summer 2015
+                    </td>
+                </tr>
+                <tr>
+                    <th>Comments/Questions</th>
+                    <td>
+                        <textarea id="comments" name="comments" cols="20" rows="5"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" align="center" style="background-color:deepskyblue;">
+                        <input type="submit" name="reset" value="Submit" />
+                        <input type="reset" name="reset" value="Clean This Form" />
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</body>
+</html>
