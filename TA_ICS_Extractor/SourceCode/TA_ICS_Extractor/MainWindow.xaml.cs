@@ -32,6 +32,9 @@
         private const string PageUserNameString = "UsernameOrEmail";
         private const string PagePasswordString = "Password";
 
+        private const string CalendarDownloadLink = "https://telerikacademy.com/Users/Calendar/DownloadCalendarEvents";
+        private const string LogoutPage = "https://telerikacademy.com/Users/Auth/LogOut";
+
         private string loadFile = string.Empty;
         private string saveFolder = string.Empty;
         private static DateTime now = DateTime.Now;
@@ -96,7 +99,8 @@
             loginData.Add(PagePasswordString, Password.Password);
             client.UploadValues(LoginPageDocument, "POST", loginData);
 
-            string htmlSource = client.DownloadString("https://telerikacademy.com/Users/Calendar/DownloadCalendarEvents");
+            Status.Text = "Please wait! Tring to login ...";
+            string htmlSource = client.DownloadString(CalendarDownloadLink);
             if (htmlSource.Contains("<!DOCTYPE html>"))
             {
                 Status.Text = "Login Failed!";
@@ -104,8 +108,8 @@
             else
             {
                 Status.Text = "Login OK!";
-                client.DownloadFile("https://telerikacademy.com/Users/Calendar/DownloadCalendarEvents",
-                                    System.AppDomain.CurrentDomain.BaseDirectory + "\\original.ics");
+                client.DownloadFile(CalendarDownloadLink, System.AppDomain.CurrentDomain.BaseDirectory + "\\original.ics");
+                client.DownloadString(LogoutPage);
                 loadFile = System.AppDomain.CurrentDomain.BaseDirectory + "\\original.ics";
                 FileNameTextBox.Text = loadFile;
                 From.Text = loadFile;
