@@ -1,0 +1,48 @@
+﻿<Window x:Class="TA_ICS_Extractor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TA ICS Extractor" Height="350" Width="525">
+    
+    <Grid>
+        <TabControl>
+            <TabItem Name="LoadTab" Header="Load">
+                <!--<TextBlock>Load file:</TextBlock>-->
+                <StackPanel>
+                    <TextBox Name="FileNameTextBox" />
+                    <Button Content="Select ICS File" Name="Select_ICS" Click="Select_ICS_Click" />
+                    <CheckBox Name="DonwloadFromSite" Checked="DonwloadFromSite_Checked" Unchecked="DonwloadFromSite_Unchecked">Or download it from the TA site:</CheckBox>
+                    <TextBlock>Username:</TextBlock>
+                    <TextBox Name="UsernameOrEmail" IsEnabled="false" />
+                    <TextBlock>Password:</TextBlock>
+                    <PasswordBox x:Name="Password" IsEnabled="false" PasswordChar="*"/>
+                    <Button Content="Login and Download" Name="Login" IsEnabled="false" Click="Login_Click"/>
+                    <TextBox Name="Status" IsEnabled="false"/>
+                    <!--<Button Content="Logout (Just in case)" Name="Logout" IsEnabled="False" Click="Logout_Click" />-->
+                </StackPanel>
+            </TabItem>
+            <TabItem Name="SaveTab" Header="Save" IsEnabled="false">
+                <StackPanel>
+                    <TextBox Name="OutputFolderTextBox" />
+                    <Button Content="Select Output Folder" Name="SelectFolder" Click="SelectFolder_Click" />
+                    <TextBlock>Or use the directory of:</TextBlock>
+                    <Button Content="the Input File" Name="UseLoadDir" Click="UseLoadDir_Click" />
+                    <Button Content="the Program" Name="UseProgramDir" Click="UseProgramDir_Click" />
+                    <Button Content="the Desktop" Name="UseDesktopDir" Click="UseDesktopDir_Click" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Name="ExtractICSTab" Header="Extract ICS Info" IsEnabled="false">
+                <StackPanel Name="ExtractSP">
+                    <TextBlock Text="Extracting from:" />
+                    <TextBlock Name="From" />
+                    <TextBlock Text="Extracting In:" />
+                    <TextBlock Name="To"/>
+                    <CheckBox Content="Extract Homeworks to separate file." Name="HomeworksCheckBox" IsChecked="true" IsEnabled="false"/>
+                    <CheckBox Content="Extract each type of lectures to separate file." Name="LecturesCheckBox" IsEnabled="false" Checked="LecturesCheckBox_Checked" Unchecked="LecturesCheckBox_Unchecked"/>
+                    <CheckBox Content="Extract to one file." Name="OneFileChackBox" IsChecked="true" Checked="OneFileChackBox_Checked" Unchecked="OneFileChackBox_Unchecked"/>
+                    <CheckBox Content="Use Source PRODID for calendar files." Name="SourcePRODID" IsChecked="true"/>
+                    <Button Content="Extract" Name="ExtractButton" Click="ExtractButton_Click"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
