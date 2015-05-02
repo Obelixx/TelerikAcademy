@@ -1,0 +1,68 @@
+﻿body {
+    text-align: left;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+th {
+    font-size: 12px;
+    border-left: 1px solid gray;
+    color: white;
+    font-weight: normal;
+    /*gradient imported from: http://www.colorzilla.com/gradient-editor/  */
+    background: #5ec306; /* Old browsers */
+    background: -moz-linear-gradient(top, #5ec306, #56b906 38%, #56b906 48%, #52b506 57%, #4eb206 90%, #47a803 95%, #407f29 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(#5ec306), color-stop(38%,#56b906), color-stop(48%,#56b906), color-stop(57%,#52b506), color-stop(90%,#4eb206), color-stop(95%,#47a803), color-stop(100%,#407f29)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #5ec306,#56b906 38%,#56b906 48%,#52b506 57%,#4eb206 90%,#47a803 95%,#407f29 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #5ec306,#56b906 38%,#56b906 48%,#52b506 57%,#4eb206 90%,#47a803 95%,#407f29 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #5ec306,#56b906 38%,#56b906 48%,#52b506 57%,#4eb206 90%,#47a803 95%,#407f29 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #5ec306,#56b906 38%,#56b906 48%,#52b506 57%,#4eb206 90%,#47a803 95%,#407f29 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5ec306', endColorstr='#407f29',GradientType=0 ); /* IE6-9 */
+    /*END gradient imported from: http://www.colorzilla.com/gradient-editor/  END*/
+}
+
+    tr:nth-child(2n+1) {
+        background-color: #ECECD8;
+    }
+
+
+th:first-of-type {
+    border-left: none;
+}
+
+
+td {
+    border-left: 1px solid gray;
+    width: 6em;
+}
+
+    td:first-of-type {
+        border-left: none;
+    }
+
+
+    td:first-child {
+        width: 10em;
+    }
+
+    td.flagGE:before {
+        width: 23px;
+        height: 14px;
+        content: url('img/flags/flagsGE.png');
+    }
+
+    td.flagME:before {
+        width: 23px;
+        height: 14px;
+        content: url('img/flags/flagsME.png');
+    }
+
+    td.flagUK:before {
+        width: 23px;
+        height: 14px;
+        content: url('img/flags/flagsUK.png');
+    }
+
+tr:last-of-type td{
+    border-bottom: 1px solid gray;
+}

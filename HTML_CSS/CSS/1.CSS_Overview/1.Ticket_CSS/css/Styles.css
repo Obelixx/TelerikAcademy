@@ -1,0 +1,38 @@
+﻿body {
+    background-color: #595959;
+    color: #A0A6A6;
+    font-family: Arial;
+    font-size: 12px;
+    text-align: left;
+}
+
+table {
+    border: 0;
+}
+
+thead {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+tbody th {
+    color: #FFF;
+    font-weight: normal;
+    font-style: italic;
+    vertical-align: top;
+}
+
+tbody a {
+    color: #FFF2B2;
+    text-decoration: none;
+}
+
+.nameStatus {
+    font-weight: bold;
+    color: #F10814;
+}
+
+.ttStatus {
+    font-weight: bold;
+    color: #D56A29;
+}
