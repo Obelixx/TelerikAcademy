@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Calculator</title>
+    <link href="calc.css" rel="stylesheet" />
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form>
+                    <input type="text" class="result" value="8854455" />
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="binANDdec" border="1" cellspacing="0">
+                    <tr>
+                        <td>
+                            <input type="text" class="bin" value="0000 0000 0000 0000" /><br />
+                            <input type="text" class="dec" value="63" />
+                        </td>
+                        <td>
+                            <input type="text" class="bin" value="0000 0000 0000 0000" /><br />
+                            <input type="text" class="dec" value="63" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="bin" value="0000 0000 0000 0000" /><br />
+                            <input type="text" class="dec" value="63" />
+                        </td>
+                        <td>
+                            <input type="text" class="bin" value="0000 0000 0000 0000" /><br />
+                            <input type="text" class="dec" value="63" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form>
+                    <table>
+                        <tr>
+                            <td rowspan="3" colspan="2">
+                                <table class="hdob">
+                                    <tr>
+                                        <td>
+                                            <input type="radio" value="hex" name="radio1[]" /><label>Hex</label><br />
+                                            <input type="radio" value="dec" name="radio1[]" /><label>Dec</label><br />
+                                            <input type="radio" value="oct" name="radio1[]" /><label>Oct</label><br />
+                                            <input type="radio" value="bin" name="radio1[]" /><label>Bin</label><br />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td><input type="button" value=" " disabled="disabled" /></td>
+                            <td><input type="button" value="Mod" /></td>
+                            <td><input type="button" value="A" disabled="disabled" /></td>
+                            <td><input type="button" value="MC" /></td>
+                            <td><input type="button" value="MR" /></td>
+                            <td><input type="button" value="MS" /></td>
+                            <td><input type="button" value="M+" /></td>
+                            <td><input type="button" value="M-" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="(" /></td>
+                            <td><input type="button" value=")" /></td>
+                            <td><input type="button" value="B" disabled="disabled" /></td>
+                            <td><input type="button" value="<-" > </td>
+                            <td><input type="button" value="CE" /></td>
+                            <td><input type="button" value="C" /></td>
+                            <td><input type="button" value="+-" /></td>
+                            <td><input type="button" value="\/^" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="RoL" /></td>
+                            <td><input type="button" value="RoR" /></td>
+                            <td><input type="button" value="C" disabled="disabled" /></td>
+                            <td><input type="button" value="7" /></td>
+                            <td><input type="button" value="8" /></td>
+                            <td><input type="button" value="9" /></td>
+                            <td><input type="button" value="/" /></td>
+                            <td><input type="button" value="%" disabled="disabled"/></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" colspan="2">
+                                <table class="hdob">
+                                    <tr>
+                                        <td>
+                                            <input type="radio" value="q" name="radio2[]" /><label>Qword</label><br />
+                                            <input type="radio" value="d" name="radio2[]" /><label>Dword</label><br />
+                                            <input type="radio" value="w" name="radio2[]" /><label>Word</label><br />
+                                            <input type="radio" value="b" name="radio2[]" /><label>Byte</label><br />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td><input type="button" value="Or" /></td>
+                            <td><input type="button" value="Xor" /></td>
+                            <td><input type="button" value="D" disabled="disabled" /></td>
+                            <td><input type="button" value="4" /></td>
+                            <td><input type="button" value="5" /></td>
+                            <td><input type="button" value="6" /></td>
+                            <td><input type="button" value="*" /></td>
+                            <td><input type="button" value="1/x" disabled="disabled"/></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="Lsh" /></td>
+                            <td><input type="button" value="Rsh" /></td>
+                            <td><input type="button" value="E" disabled="disabled" /></td>
+                            <td><input type="button" value="1" /></td>
+                            <td><input type="button" value="2" /></td>
+                            <td><input type="button" value="3" /></td>
+                            <td><input type="button" value="-" /></td>
+                            <td rowspan="2"><input id="even_button" type="button" value="=" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="Not" /></td>
+                            <td><input type="button" value="And" /></td>
+                            <td><input type="button" value="F" disabled="disabled" /></td>
+                            <td colspan="2"><input id="zero_button" type="button" value="0" /></td>
+                            <td><input type="button" value="," disabled="disabled" /></td>
+                            <td><input type="button" value="+" /></td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

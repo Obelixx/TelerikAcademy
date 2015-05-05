@@ -1,0 +1,46 @@
+﻿body {
+    background-color: #D9E4F1;
+}
+
+.result{
+    background-color: #FCFDFE;
+    width:410px;
+    height:56px;
+    text-align:right;
+    font-size: 28px;
+}
+
+.bin {
+    background-color:#D9E4F1;
+    width:100%;
+}
+
+.dec{
+    background-color:#D9E4F1;
+    width:100%;
+}
+
+.binANDdec{
+    width:410px;
+    height: 66px;
+    background-color:#D9E4F1;
+}
+
+.hdob{
+    border:1px solid grey;
+    width:78px;
+    height:100px;
+}
+
+input[type=button]{
+    width: 36px;
+    height: 30px;
+}
+#even_button{
+    height:60px;
+}
+#zero_button{
+    width:72px;
+}
+
+/* no more time :( */
