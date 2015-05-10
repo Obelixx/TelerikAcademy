@@ -1,0 +1,56 @@
+﻿body {
+    background-color: #EEEEEE;
+    font-family: Arial;
+}
+h2 {
+    font-size:17px;
+    font-weight:normal;
+}
+
+article {
+    border: 1px solid #AFAFAF;
+    background-color: #FFFFFF;
+    margin-top:36px;
+    margin-left:4px;
+    padding:18px;
+    width:362px;
+    min-height: 82px;
+}
+
+    article img {
+        border: 1px solid #AFAFAF;
+        float:left;
+        display:inline-block;
+    }
+
+    article div {
+        font-size:12px;
+        display:block;
+        padding: 0 10px 12px 150px;
+    }
+
+    article form {
+        text-align: right;
+        vertical-align: bottom;
+    }
+
+    article input form input[type=button] {
+    }
+
+.limage {
+    background-image: url(img/b1.PNG);
+    border: 0;
+    color:white;
+    padding-left:14px;
+    width:76px;
+    height:25px;
+}
+
+.aimage {
+    background-image: url(img/b2.PNG);
+    border: 0;
+    color:white;
+    padding-left:14px;
+    width:63px;
+    height:25px;
+}

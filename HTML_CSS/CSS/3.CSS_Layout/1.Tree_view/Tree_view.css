@@ -1,0 +1,20 @@
+﻿body {
+}
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body > ul > li > ul > li {
+    color: gray;
+    display: none;
+}
+
+body > ul > li:hover:first-line {
+    text-decoration: underline;
+}
+
+    body > ul > li:hover > ul > li {
+        display: block;
+    }
