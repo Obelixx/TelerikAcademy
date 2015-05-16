@@ -1,0 +1,52 @@
+﻿body {
+  background-color: #fff;
+}
+body #images ul {
+  list-style-type: none;
+}
+body #images ul li {
+  display: inline;
+}
+body #images ul li img {
+  width: 10%;
+  height: 10%;
+}
+body #images ul li input {
+  visibility: hidden;
+}
+body #images ul li input[id="radio1"]:checked:after {
+  content: url("img/1.jpg");
+  visibility: visible;
+  margin-top: 30px;
+  display: block;
+  margin-left: 0;
+}
+body #images ul li input[id="radio2"]:checked:after {
+  content: url("img/2.jpg");
+  visibility: visible;
+  margin-top: 30px;
+  display: block;
+  margin-left: -154px;
+}
+body #images ul li input[id="radio3"]:checked:after {
+  content: url("img/3.jpg");
+  visibility: visible;
+  margin-top: 30px;
+  display: block;
+  margin-left: -308px;
+}
+body #images ul li input[id="radio4"]:checked:after {
+  content: url("img/4.jpg");
+  visibility: visible;
+  margin-top: 30px;
+  display: block;
+  margin-left: -462px;
+}
+body #images ul li input[id="radio5"]:checked:after {
+  content: url("img/5.jpg");
+  visibility: visible;
+  margin-top: 30px;
+  display: block;
+  margin-left: -616px;
+}
+/*# sourceMappingURL=Web_Gallery.css.map */
