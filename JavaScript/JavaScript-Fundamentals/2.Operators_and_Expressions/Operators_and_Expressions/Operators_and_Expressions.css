@@ -1,0 +1,23 @@
+﻿body{
+    background-color:darkslategray;
+    color:black;
+}
+
+    body object {
+        width: 100%;
+        height:170px;
+    }
+body div {
+    width: 100%;
+    height: auto;
+    color:yellowgreen;
+    
+}
+
+.task{
+    background-color:darkgray;
+}
+
+.end{
+    border: 4px solid white;
+}
