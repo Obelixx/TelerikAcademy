@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Array Methods</title>
+    <link href="Array_Methods.css" rel="stylesheet" />
+</head>
+<body>
+    <!--Task 1:-->
+    <header class="task">
+        <h1><a id="user-content-array-methods" class="anchor" href="#array-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Array Methods</h1>
+
+        <h3><a id="user-content-problem-1-make-person" class="anchor" href="#problem-1-make-person" aria-hidden="true"><span class="octicon octicon-link"></span></a>Problem 1. Make person</h3>
+
+        <ul>
+            <li>
+                Write a function for creating persons.
+
+                <ul>
+                    <li>  Each person must have <strong>firstname</strong>, <strong>lastname</strong>, <strong>age</strong> and <strong>gender</strong> (true is female, false is male)</li>
+                </ul>
+            </li>
+            <li>  Generate an array with ten person with different names, ages and genders</li>
+        </ul>
+    </header>
+    <hr />
+    <h4>Program:</h4>
+    <object data="1.Make_person.js" type="text/plain"></object>
+    <hr />
+    <h4>Output:</h4>
+    <div id="Make_person"></div>
+    <hr class="end" />
+    <script src="1.Make_person.js" type="text/javascript"></script>
+    <!--Task 2:-->
+    <header class="task">
+        <h3><a id="user-content-problem-2-people-of-age" class="anchor" href="#problem-2-people-of-age" aria-hidden="true"><span class="octicon octicon-link"></span></a>Problem 2. People of age</h3>
+
+        <ul>
+            <li>
+                Write a function that checks if an array of person contains only people of age (with age 18 or greater)
+
+                <ul>
+                    <li>  Use <strong>only array methods</strong> and no regular loops (for, while)</li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <hr />
+    <h4>Program:</h4>
+    <object data="2.People_of_age.js" type="text/plain"></object>
+    <hr />
+    <h4>Output:</h4>
+    <div id="People_of_age"></div>
+    <hr class="end" />
+    <script src="2.People_of_age.js" type="text/javascript"></script>
+    <!--Task 3:-->
+    <header class="task">
+        <h3><a id="user-content-problem-3-underage-people" class="anchor" href="#problem-3-underage-people" aria-hidden="true"><span class="octicon octicon-link"></span></a>Problem 3. Underage people</h3>
+
+        <ul>
+            <li>
+                Write a function that prints all underaged persons of an array of person
+
+                <ul>
+                    <li>  Use <strong>Array#filter</strong> and <strong>Array#forEach</strong></li>
+                    <li>  Use <strong>only array methods</strong> and no regular loops (for, while)</li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <hr />
+    <h4>Program:</h4>
+    <object data="3.Underage_people.js" type="text/plain"></object>
+    <hr />
+    <h4>Output:</h4>
+    <div id="Underage_people"></div>
+    <hr class="end" />
+    <script src="3.Underage_people.js" type="text/javascript"></script>
+    <!--Task 4:-->
+    <header class="task">
+        <h3><a id="user-content-problem-4-average-age-of-females" class="anchor" href="#problem-4-average-age-of-females" aria-hidden="true"><span class="octicon octicon-link"></span></a>Problem 4. Average age of females</h3>
+
+        <ul>
+            <li>
+                Write a function that calculates the average age of all females, extracted from an array of persons
+
+                <ul>
+                    <li>  Use <strong>Array#filter</strong></li>
+                    <li>  Use <strong>only array methods</strong> and no regular loops (for, while)</li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <hr />
+    <h4>Program:</h4>
+    <object data="4.Average_age_of_females.js" type="text/plain"></object>
+    <hr />
+    <h4>Output:</h4>
+    <div id="Average_age_of_females"></div>
+    <hr class="end" />
+    <script src="4.Average_age_of_females.js" type="text/javascript"></script>
+    <!--Task 5:-->
+    <header class="task">
+        <h3><a id="user-content-problem-5-youngest-person" class="anchor" href="#problem-5-youngest-person" aria-hidden="true"><span class="octicon octicon-link"></span></a>Problem 5. Youngest person</h3>
+
+        <ul>
+            <li>
+                Write a function that finds the youngest male person in a given array of people and prints his full name
+
+                <ul>
+                    <li>  Use <strong>only array methods</strong> and no regular loops (for, while)</li>
+                    <li>  Use <strong>Array#find</strong></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <hr />
+    <h4>Program:</h4>
+    <object data="5.Youngest_person.js" type="text/plain"></object>
+    <hr />
+    <h4>Output:</h4>
+    <div id="Youngest_person"></div>
+    <hr class="end" />
+    <script src="5.Youngest_person.js" type="text/javascript"></script>
+    <!--Task 6:-->
+    <header class="task">
+        <h3><a id="user-content-problem-6-group-people" class="anchor" href="#problem-6-group-people" aria-hidden="true"><span class="octicon octicon-link"></span></a>Problem 6. Group people</h3>
+
+        <ul>
+            <li>
+                Write a function that groups an array of persons by first letter of first name and returns the groups as a JavaScript Object
+
+                <ul>
+                    <li>  Use <strong>Array#reduce</strong></li>
+                    <li>  Use <strong>only array methods</strong> and no regular loops (for, while)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p><em>Example:</em></p>
+
+<pre><code>    result = {
+        'a': [{
+            firstname: 'Asen',
+            /* ... */
+        }, {
+            firstname: 'Anakonda',
+            /* ... */
+        }],
+        'j': [{
+            firstname: 'John',
+            /* ... */
+        }]
+    };
+</code></pre>
+    </header>
+    <hr />
+    <h4>Program:</h4>
+    <object data="6.Group_people.js" type="text/plain"></object>
+    <hr />
+    <h4>Output:</h4>
+    <div id="Group_people"></div>
+    <hr class="end" />
+    <script src="6.Group_people.js" type="text/javascript"></script>
+
+</body>
+</html>
