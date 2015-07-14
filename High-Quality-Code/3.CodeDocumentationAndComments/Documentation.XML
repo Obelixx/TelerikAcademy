@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StringExtensions</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.ILS.Common.StringExtensions">
+            <summary>
+            String extensions for Cyrillic users.
+            </summary>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToMd5Hash(System.String)">
+            <summary>
+            Converts string to md5hash sum.
+            </summary>
+            <param name="input">string</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToBoolean(System.String)">
+            <summary>
+            Converts "true", "ok", "yes", "1", "да" to boolean 'true' value. 
+            Evrything else to 'false' value.
+            </summary>
+            <param name="input">string</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToShort(System.String)">
+            <summary>
+            Converts input string to short value.
+            </summary>
+            <param name="input">string</param>
+            <returns>short</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToInteger(System.String)">
+            <summary>
+            Converts input string to int value.
+            </summary>
+            <param name="input">string</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToLong(System.String)">
+            <summary>
+            Converts input string to long value.
+            </summary>
+            <param name="input">string</param>
+            <returns>long</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToDateTime(System.String)">
+            <summary>
+            Converts input string to DateTime value.
+            </summary>
+            <param name="input">string</param>
+            <returns>DateTime</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.CapitalizeFirstLetter(System.String)">
+            <summary>
+            Returns new string with uppercase first letter.
+            </summary>
+            <param name="input">string</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.GetStringBetween(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Returns string between 'startString' and 'endString' calculated form 'startFrom'
+            </summary>
+            <param name="input">string</param>
+            <param name="startString">string</param>
+            <param name="endString">string</param>
+            <param name="startFrom">int</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ConvertCyrillicToLatinLetters(System.String)">
+            <summary>
+            Converts Cyrillic letters to their Latin representation.
+            </summary>
+            <param name="input">string</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ConvertLatinToCyrillicKeyboard(System.String)">
+            <summary>
+            Converts Latin letters to their Cyrillic representation.
+            </summary>
+            <param name="input">string</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToValidUsername(System.String)">
+            <summary>
+            Replaces invalid characters in username and returnes new valid username.
+            </summary>
+            <param name="input">string</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToValidLatinFileName(System.String)">
+            <summary>
+            Replaces invalid characters in file name and returnes new valid file name.
+            </summary>
+            <param name="input">string</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.GetFirstCharacters(System.String,System.Int32)">
+            <summary>
+            Returns first 'charsCount' characters in given input.
+            </summary>
+            <param name="input">string</param>
+            <param name="charsCount">int</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.GetFileExtension(System.String)">
+            <summary>
+            Returns file extension.
+            </summary>
+            <param name="fileName">string</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToContentType(System.String)">
+            <summary>
+            Returns content type string by given file extension.
+            </summary>
+            <example>
+            "jpg" to "image/jpeg"
+            </example>
+            <param name="fileExtension">string</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Telerik.ILS.Common.StringExtensions.ToByteArray(System.String)">
+            <summary>
+            Returns input string ot byte array.
+            </summary>
+            <param name="input">string</param>
+            <returns>byte[]</returns>
+        </member>
+    </members>
+</doc>
