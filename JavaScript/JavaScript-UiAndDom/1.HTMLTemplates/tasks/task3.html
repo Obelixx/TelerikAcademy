@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <ul id="books-list" data-template="book-item-template"></ul>
+    <script id="book-item-template" type="…">
+        <li class="book-item">
+            <a href="/#books/{{id}}">
+                <strong>{{title}}</strong>
+            </a>
+        </li>
+    </script>  
+    
+
+    <script src="task-3.js">
+        $('#books-list').listview(books);
+    </script>
+</body>
+</html>
