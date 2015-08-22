@@ -1,0 +1,20 @@
+﻿<#@ template debug="true" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+using System;
+
+public class CompileTime
+{
+	public string Day 
+	{ 
+		get
+		{
+<# string today = DateTime.Now.DayOfWeek.ToString(); #>
+			return "<#=today#>";
+		}
+	}
+}
+	 

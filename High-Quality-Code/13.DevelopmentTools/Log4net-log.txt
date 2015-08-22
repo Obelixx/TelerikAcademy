@@ -1,0 +1,8 @@
+2015-08-20 22:44:07,683 [9] INFO  Log4netExample.LoggerExample [(null)] - Trying something.
+2015-08-20 22:44:07,702 [9] INFO  Log4netExample.LoggerExample [(null)] - This is successful!
+2015-08-20 22:44:07,703 [9] DEBUG Log4netExample.LoggerExample [(null)] - Program exited.
+2015-08-20 22:44:15,426 [10] INFO  Log4netExample.LoggerExample [(null)] - Trying something.
+2015-08-20 22:44:15,451 [10] ERROR Log4netExample.LoggerExample [(null)] - This is unsuccessful!
+System.Exception: Test exception
+   at Log4netExample.LoggerExample.Main(String[] args) in e:\My Documents\Telerik Academy\Programming\High-Quality-Code(KPK)\13.DevelopmentTools\Log4net\Log4netExample\Log4netExample\LoggerExample.cs:line 17
+2015-08-20 22:44:15,455 [10] DEBUG Log4netExample.LoggerExample [(null)] - Program exited.
